@@ -7,28 +7,36 @@ import com.sun.source.util.Plugin;
  *
  * @author walisson.braga
  */
+
 public class Produto {
     private String nome;
     private double preco;
-    private int qauntEmEstoque;
+    int quantEmEstoque;
     
+    //Construtor
     public Produto(String nome, double preco, int quant){
         this.nome = nome;
         this.preco = preco;
-        this.qauntEmEstoque = quant;
+        this.quantEmEstoque = quant;
 }
-    
+    // Método para exibir informações
     public void exibirInformacoes() {
         System.out.println(" Nome do Produto: " + nome);
-        System.out.println(" Preco do produto: " + preco);
-        System.out.println(" Quantidade do produto: " + qauntEmEstoque);
+        System.out.println(" Preco do produto: R$" + preco);
+        System.out.println(" Quantidade do produto: " + quantEmEstoque);
     }
     
-    public void adicionarAoEstoque(int qunt){
-        qauntEmEstoque += qunt;
+    // Método para exibir informações
+    public void adicionarAoEstoque(int quant){
+        quantEmEstoque += quant;
     }
     
-    public void removerDoEstoque(int qunt){
-        qauntEmEstoque += qunt;
+    // Remover do estoque (com validação)
+    public void removerDoEstoque(int quant){
+        if (quantEmEstoque >= quant) {
+        quantEmEstoque -= quant;
+        }else{ 
+            System.out.println(" Sem estoque suficiente ");
+        }
     }
 }
