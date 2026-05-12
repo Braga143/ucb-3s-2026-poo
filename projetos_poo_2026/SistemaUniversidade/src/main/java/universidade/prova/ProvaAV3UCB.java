@@ -9,5 +9,11 @@ package universidade.prova;
  * @author Windows
  */
 public class ProvaAV3UCB extends ProvaFinalUniversidade{
-    
+
+    @Override
+    public boolean habilitadoRealizarProva(){
+
+        return true;
+    }
+
 }
