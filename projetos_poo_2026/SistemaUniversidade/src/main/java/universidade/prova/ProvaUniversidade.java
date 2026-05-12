@@ -9,23 +9,25 @@ package universidade.prova;
  * @author Windows
  */
 public abstract class ProvaUniversidade {
-    protected double notaav1, notaav2, notaav3;
-    protected double pesoav1, pesoav2, pesoav3;
+    protected double notaAv1, notaAv2, notaAv3;
+    protected double pesoAv1, pesoAv2, pesoAv3;
     protected double mediaMinima;
-    protected boolean realizouProvafinal;
+    protected boolean realizouProvaFinal;
     
      
     public abstract double calcularMedia();
     
     public boolean aprovado (){
-        if calcularMedia() media >= mediaMininma;
-            aprovado
-        
-        return false;
-    
+        if (calcularMedia() >= mediaMinima){
+            return true; 
+        }
+        else{
+            return false;
+        }
     }
     
     public abstract ProvaFinalUniversidade getProvaFinalUniversidade();
        
     
 }
+

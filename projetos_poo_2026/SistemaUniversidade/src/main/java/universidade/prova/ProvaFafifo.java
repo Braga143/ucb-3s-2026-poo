@@ -8,6 +8,6 @@ package universidade.prova;
  *
  * @author Windows
  */
-public class ProvaFafifo {
+public class ProvaFafifo extends ProvaUniversidade{
     
 }
